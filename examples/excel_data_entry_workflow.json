@@ -1,0 +1,83 @@
+{
+  "id": "excel_data_entry_workflow",
+  "name": "Excel Data Entry Workflow",
+  "description": "Automated data entry into Excel spreadsheet",
+  "version": "1.0",
+  "created_at": "2025-10-29T00:00:00Z",
+  "actions": [
+    {
+      "step": 1,
+      "type": "excel_create",
+      "description": "Create new Excel workbook",
+      "visible": true
+    },
+    {
+      "step": 2,
+      "type": "excel_write_cell",
+      "description": "Write header - Name",
+      "sheet": 1,
+      "cell": "A1",
+      "value": "Name"
+    },
+    {
+      "step": 3,
+      "type": "excel_write_cell",
+      "description": "Write header - Email",
+      "sheet": 1,
+      "cell": "B1",
+      "value": "Email"
+    },
+    {
+      "step": 4,
+      "type": "excel_write_cell",
+      "description": "Write header - Phone",
+      "sheet": 1,
+      "cell": "C1",
+      "value": "Phone"
+    },
+    {
+      "step": 5,
+      "type": "excel_write_range",
+      "description": "Write data rows",
+      "sheet": 1,
+      "start_cell": "A2",
+      "data": [
+        ["John Doe", "john@example.com", "555-0001"],
+        ["Jane Smith", "jane@example.com", "555-0002"],
+        ["Bob Johnson", "bob@example.com", "555-0003"]
+      ]
+    },
+    {
+      "step": 6,
+      "type": "excel_insert_formula",
+      "description": "Add count formula",
+      "sheet": 1,
+      "cell": "A6",
+      "formula": "=COUNTA(A2:A4)"
+    },
+    {
+      "step": 7,
+      "type": "excel_save",
+      "description": "Save workbook",
+      "file_path": "C:\\Users\\Public\\Documents\\contacts.xlsx"
+    },
+    {
+      "step": 8,
+      "type": "wait",
+      "description": "Wait for save to complete",
+      "duration": 1.0
+    },
+    {
+      "step": 9,
+      "type": "excel_close",
+      "description": "Close Excel",
+      "save": false
+    }
+  ],
+  "metadata": {
+    "category": "excel_automation",
+    "tags": ["excel", "data-entry", "spreadsheet"],
+    "estimated_duration": 15,
+    "requires_excel": true
+  }
+}

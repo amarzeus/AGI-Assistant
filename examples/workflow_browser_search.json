@@ -1,0 +1,362 @@
+{
+  "workflow_id": "wf_2024_002_browser_search",
+  "name": "Browser Research Workflow",
+  "description": "Repetitive pattern of opening browser, searching for specific topics, and copying results",
+  "pattern_type": "web_research",
+  "frequency": 3,
+  "occurrences": [
+    "2024-01-15T14:10:22Z",
+    "2024-01-15T14:15:18Z",
+    "2024-01-15T14:19:45Z"
+  ],
+  "first_detected": "2024-01-15T14:10:22Z",
+  "last_occurrence": "2024-01-15T14:19:45Z",
+  "average_duration_seconds": 65,
+  "total_time_spent_seconds": 195,
+  "automation_feasibility": 0.85,
+  "confidence": 0.82,
+  "estimated_time_saved_per_execution": "55 seconds",
+  "estimated_daily_time_saved": "20 minutes",
+  "complexity": "medium",
+  "tags": [
+    "browser",
+    "web_search",
+    "google",
+    "research",
+    "copy_paste"
+  ],
+  "applications_involved": [
+    {
+      "name": "Google Chrome",
+      "executable": "chrome.exe",
+      "window_title_pattern": "* - Google Chrome"
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "action": "open_application",
+      "target": {
+        "application": "Google Chrome",
+        "executable": "chrome.exe"
+      },
+      "description": "Launch Google Chrome browser",
+      "confidence": 0.94,
+      "average_duration_ms": 3200,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-22_001.png"
+    },
+    {
+      "step": 2,
+      "action": "navigate_url",
+      "target": {
+        "element_type": "address_bar",
+        "url": "https://www.google.com"
+      },
+      "method": "type_in_address_bar",
+      "description": "Navigate to Google homepage",
+      "confidence": 0.91,
+      "average_duration_ms": 1500,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-25_002.png"
+    },
+    {
+      "step": 3,
+      "action": "click",
+      "target": {
+        "element_type": "search_box",
+        "selector": "input[name='q']",
+        "placeholder_text": "Search Google or type a URL"
+      },
+      "coordinates": {
+        "x": 640,
+        "y": 350
+      },
+      "description": "Click on Google search box",
+      "confidence": 0.93,
+      "average_duration_ms": 200,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-26_003.png"
+    },
+    {
+      "step": 4,
+      "action": "type_text",
+      "target": {
+        "element_type": "search_box",
+        "selector": "input[name='q']"
+      },
+      "input": {
+        "text": "python documentation",
+        "input_method": "keyboard",
+        "variable": true,
+        "variable_name": "search_query"
+      },
+      "description": "Type search query (variable content)",
+      "confidence": 0.89,
+      "average_duration_ms": 1200,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-28_004.png",
+      "notes": "Queries observed: 'python documentation', 'javascript tutorial', 'react best practices'"
+    },
+    {
+      "step": 5,
+      "action": "keyboard_shortcut",
+      "target": {
+        "application": "Google Chrome"
+      },
+      "input": {
+        "keys": ["Enter"],
+        "description": "Submit search"
+      },
+      "description": "Press Enter to search",
+      "confidence": 0.96,
+      "average_duration_ms": 100,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-29_005.png"
+    },
+    {
+      "step": 6,
+      "action": "wait",
+      "target": {
+        "element_type": "search_results",
+        "wait_for": "page_load"
+      },
+      "description": "Wait for search results to load",
+      "confidence": 0.88,
+      "average_duration_ms": 1800,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-31_006.png"
+    },
+    {
+      "step": 7,
+      "action": "click",
+      "target": {
+        "element_type": "search_result",
+        "position": "first",
+        "link_text_pattern": "Official Python Documentation"
+      },
+      "coordinates": {
+        "x": 450,
+        "y": 280
+      },
+      "description": "Click first search result",
+      "confidence": 0.86,
+      "average_duration_ms": 250,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-32_007.png"
+    },
+    {
+      "step": 8,
+      "action": "wait",
+      "target": {
+        "element_type": "webpage",
+        "wait_for": "page_load"
+      },
+      "description": "Wait for result page to load",
+      "confidence": 0.87,
+      "average_duration_ms": 2500,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-35_008.png"
+    },
+    {
+      "step": 9,
+      "action": "keyboard_shortcut",
+      "target": {
+        "application": "Google Chrome"
+      },
+      "input": {
+        "keys": ["Ctrl", "L"],
+        "description": "Select address bar"
+      },
+      "description": "Select URL in address bar using Ctrl+L",
+      "confidence": 0.94,
+      "average_duration_ms": 150,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-36_009.png"
+    },
+    {
+      "step": 10,
+      "action": "keyboard_shortcut",
+      "target": {
+        "application": "Google Chrome"
+      },
+      "input": {
+        "keys": ["Ctrl", "C"],
+        "description": "Copy URL"
+      },
+      "description": "Copy URL to clipboard using Ctrl+C",
+      "confidence": 0.96,
+      "average_duration_ms": 100,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-37_010.png"
+    },
+    {
+      "step": 11,
+      "action": "scroll",
+      "target": {
+        "element_type": "webpage",
+        "direction": "down",
+        "amount": "medium"
+      },
+      "description": "Scroll down to read content",
+      "confidence": 0.79,
+      "average_duration_ms": 800,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-39_011.png",
+      "optional": true
+    },
+    {
+      "step": 12,
+      "action": "select_text",
+      "target": {
+        "element_type": "text_content",
+        "selector": "main article",
+        "variable": true
+      },
+      "method": "triple_click",
+      "description": "Select text content from page",
+      "confidence": 0.81,
+      "average_duration_ms": 500,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-41_012.png",
+      "optional": true
+    },
+    {
+      "step": 13,
+      "action": "keyboard_shortcut",
+      "target": {
+        "application": "Google Chrome"
+      },
+      "input": {
+        "keys": ["Ctrl", "C"],
+        "description": "Copy selected text"
+      },
+      "description": "Copy selected text to clipboard",
+      "confidence": 0.88,
+      "average_duration_ms": 100,
+      "screenshot_reference": "screenshots/2024-01-15/14-10-42_013.png",
+      "optional": true
+    }
+  ],
+  "variables_detected": [
+    {
+      "name": "search_query",
+      "type": "text",
+      "location": "google_search_box",
+      "observed_values": [
+        "python documentation",
+        "javascript tutorial",
+        "react best practices"
+      ],
+      "required": true,
+      "description": "Search term to look up"
+    },
+    {
+      "name": "result_position",
+      "type": "number",
+      "location": "search_results",
+      "observed_values": [1, 1, 1],
+      "required": false,
+      "default": 1,
+      "description": "Which search result to click (1 = first result)"
+    }
+  ],
+  "automation_suggestions": [
+    {
+      "title": "Browser Automation with Selenium",
+      "description": "Automate web searches and result extraction using Selenium WebDriver",
+      "implementation_type": "python_selenium",
+      "difficulty": "medium",
+      "estimated_setup_time": "30 minutes",
+      "requirements": [
+        "Python 3.x",
+        "selenium library",
+        "ChromeDriver"
+      ],
+      "steps": [
+        "Install Selenium: pip install selenium",
+        "Download ChromeDriver for your Chrome version",
+        "Create Python script with search automation",
+        "Add logic to click first result and extract URL",
+        "Implement clipboard functionality with pyperclip",
+        "Add error handling for failed searches"
+      ],
+      "expected_time_savings": "55 seconds per execution"
+    },
+    {
+      "title": "Browser Extension",
+      "description": "Create a Chrome extension with custom search shortcuts",
+      "implementation_type": "chrome_extension",
+      "difficulty": "hard",
+      "estimated_setup_time": "2 hours",
+      "requirements": [
+        "JavaScript/HTML knowledge",
+        "Chrome Extension API"
+      ],
+      "steps": [
+        "Create manifest.json for extension",
+        "Build popup UI with search input",
+        "Add background script for automation",
+        "Implement keyboard shortcuts",
+        "Add result extraction logic",
+        "Package and install extension"
+      ],
+      "expected_time_savings": "60 seconds per execution, plus always available"
+    },
+    {
+      "title": "Custom Search Bookmarklet",
+      "description": "Use browser bookmarklets for quick searches",
+      "implementation_type": "bookmarklet",
+      "difficulty": "easy",
+      "estimated_setup_time": "5 minutes",
+      "steps": [
+        "Create JavaScript bookmarklet code",
+        "Add as browser bookmark",
+        "Click bookmarklet to trigger search",
+        "Copy results manually (partial automation)"
+      ],
+      "expected_time_savings": "30 seconds per execution"
+    },
+    {
+      "title": "PowerShell/AutoHotkey Script",
+      "description": "Desktop automation using AutoHotkey for Windows",
+      "implementation_type": "autohotkey",
+      "difficulty": "medium",
+      "estimated_setup_time": "20 minutes",
+      "requirements": [
+        "AutoHotkey installed",
+        "Windows OS"
+      ],
+      "steps": [
+        "Install AutoHotkey",
+        "Create .ahk script file",
+        "Add browser launch and navigation logic",
+        "Implement search and click automation",
+        "Assign global hotkey (e.g., Ctrl+Alt+S)",
+        "Run script on startup"
+      ],
+      "expected_time_savings": "50 seconds per execution"
+    }
+  ],
+  "metadata": {
+    "detected_by": "AGI Assistant v1.0.0",
+    "analysis_engine": "Phi-3-mini",
+    "pattern_detection_version": "1.0",
+    "session_id": "session_2024-01-15_14-08-00",
+    "user_confirmed": false,
+    "exported_at": "2024-01-15T14:25:00Z"
+  },
+  "round_2_integration": {
+    "ready_for_automation": true,
+    "automation_engine_compatible": true,
+    "requires_user_input": true,
+    "recommended_trigger": "keyboard_shortcut",
+    "safety_checks": [
+      "Verify Chrome is installed",
+      "Check internet connectivity",
+      "Confirm ChromeDriver version matches",
+      "Validate search query format",
+      "Handle popup blockers"
+    ],
+    "challenges": [
+      "Google search results page structure may change",
+      "CAPTCHA may appear for automated searches",
+      "Page load times vary with connection speed",
+      "Anti-bot detection may block automation"
+    ],
+    "recommendations": [
+      "Add delays between actions to appear more human-like",
+      "Implement retry logic for network failures",
+      "Use headless mode for background automation",
+      "Cache frequently accessed pages"
+    ]
+  }
+}

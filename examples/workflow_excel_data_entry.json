@@ -1,0 +1,290 @@
+{
+  "workflow_id": "wf_2024_001_excel_data_entry",
+  "name": "Excel Data Entry Pattern",
+  "description": "Repetitive workflow for entering product data into Excel spreadsheet with consistent column structure",
+  "pattern_type": "data_entry",
+  "frequency": 3,
+  "occurrences": [
+    "2024-01-15T10:23:45Z",
+    "2024-01-15T10:28:12Z",
+    "2024-01-15T10:32:08Z"
+  ],
+  "first_detected": "2024-01-15T10:23:45Z",
+  "last_occurrence": "2024-01-15T10:32:08Z",
+  "average_duration_seconds": 45,
+  "total_time_spent_seconds": 135,
+  "automation_feasibility": 0.92,
+  "confidence": 0.87,
+  "estimated_time_saved_per_execution": "40 seconds",
+  "estimated_daily_time_saved": "15 minutes",
+  "complexity": "low",
+  "tags": [
+    "excel",
+    "data_entry",
+    "spreadsheet",
+    "repetitive"
+  ],
+  "applications_involved": [
+    {
+      "name": "Microsoft Excel",
+      "executable": "EXCEL.EXE",
+      "window_title_pattern": "Book*.xlsx - Excel"
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "action": "open_application",
+      "target": {
+        "application": "Microsoft Excel",
+        "executable": "EXCEL.EXE"
+      },
+      "description": "Launch Microsoft Excel application",
+      "confidence": 0.95,
+      "average_duration_ms": 2500,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-45_001.png"
+    },
+    {
+      "step": 2,
+      "action": "click",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "A1",
+        "text_visible": ""
+      },
+      "coordinates": {
+        "x": 145,
+        "y": 210
+      },
+      "description": "Click on cell A1",
+      "confidence": 0.89,
+      "average_duration_ms": 150,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-47_002.png"
+    },
+    {
+      "step": 3,
+      "action": "type_text",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "A1"
+      },
+      "input": {
+        "text": "Product Name",
+        "input_method": "keyboard"
+      },
+      "description": "Type 'Product Name' in cell A1",
+      "confidence": 0.91,
+      "average_duration_ms": 850,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-48_003.png"
+    },
+    {
+      "step": 4,
+      "action": "navigate",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "B1"
+      },
+      "method": "tab_key",
+      "description": "Navigate to cell B1 using Tab key",
+      "confidence": 0.93,
+      "average_duration_ms": 100,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-49_004.png"
+    },
+    {
+      "step": 5,
+      "action": "type_text",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "B1"
+      },
+      "input": {
+        "text": "Price",
+        "input_method": "keyboard"
+      },
+      "description": "Type 'Price' in cell B1",
+      "confidence": 0.91,
+      "average_duration_ms": 450,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-50_005.png"
+    },
+    {
+      "step": 6,
+      "action": "navigate",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "A2"
+      },
+      "method": "enter_key",
+      "description": "Navigate to cell A2 using Enter key",
+      "confidence": 0.94,
+      "average_duration_ms": 100,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-51_006.png"
+    },
+    {
+      "step": 7,
+      "action": "type_text",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "A2"
+      },
+      "input": {
+        "text": "Widget",
+        "input_method": "keyboard",
+        "variable": true,
+        "variable_name": "product_name"
+      },
+      "description": "Type product name in cell A2 (variable content)",
+      "confidence": 0.88,
+      "average_duration_ms": 600,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-52_007.png",
+      "notes": "Content varies: 'Widget', 'Gadget', 'Device' observed"
+    },
+    {
+      "step": 8,
+      "action": "navigate",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "B2"
+      },
+      "method": "tab_key",
+      "description": "Navigate to cell B2 using Tab key",
+      "confidence": 0.93,
+      "average_duration_ms": 100,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-53_008.png"
+    },
+    {
+      "step": 9,
+      "action": "type_text",
+      "target": {
+        "element_type": "cell",
+        "cell_reference": "B2"
+      },
+      "input": {
+        "text": "29.99",
+        "input_method": "keyboard",
+        "variable": true,
+        "variable_name": "price",
+        "format": "currency"
+      },
+      "description": "Type price in cell B2 (variable content)",
+      "confidence": 0.89,
+      "average_duration_ms": 500,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-54_009.png",
+      "notes": "Content varies: '29.99', '49.99', '99.99' observed"
+    },
+    {
+      "step": 10,
+      "action": "keyboard_shortcut",
+      "target": {
+        "application": "Microsoft Excel"
+      },
+      "input": {
+        "keys": ["Ctrl", "S"],
+        "description": "Save document"
+      },
+      "description": "Save the Excel file using Ctrl+S",
+      "confidence": 0.96,
+      "average_duration_ms": 250,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-55_010.png"
+    },
+    {
+      "step": 11,
+      "action": "close_application",
+      "target": {
+        "application": "Microsoft Excel",
+        "executable": "EXCEL.EXE"
+      },
+      "method": "alt_f4",
+      "description": "Close Excel using Alt+F4",
+      "confidence": 0.94,
+      "average_duration_ms": 500,
+      "screenshot_reference": "screenshots/2024-01-15/10-23-56_011.png"
+    }
+  ],
+  "variables_detected": [
+    {
+      "name": "product_name",
+      "type": "text",
+      "location": "A2",
+      "observed_values": ["Widget", "Gadget", "Device"],
+      "required": true,
+      "description": "Name of the product to enter"
+    },
+    {
+      "name": "price",
+      "type": "number",
+      "format": "currency",
+      "location": "B2",
+      "observed_values": ["29.99", "49.99", "99.99"],
+      "required": true,
+      "description": "Price of the product"
+    }
+  ],
+  "automation_suggestions": [
+    {
+      "title": "Create Excel Data Entry Macro",
+      "description": "Automate repetitive Excel data entry with a macro that prompts for product name and price",
+      "implementation_type": "vba_macro",
+      "difficulty": "easy",
+      "estimated_setup_time": "10 minutes",
+      "steps": [
+        "Create VBA macro in Excel",
+        "Add input prompts for product_name and price",
+        "Map inputs to cells A1, B1, A2, B2",
+        "Add auto-save functionality",
+        "Assign keyboard shortcut to macro"
+      ],
+      "expected_time_savings": "40 seconds per execution"
+    },
+    {
+      "title": "Python Script with openpyxl",
+      "description": "Create a Python script that automates Excel data entry using openpyxl library",
+      "implementation_type": "python_script",
+      "difficulty": "medium",
+      "estimated_setup_time": "20 minutes",
+      "requirements": ["Python 3.x", "openpyxl library"],
+      "steps": [
+        "Install openpyxl: pip install openpyxl",
+        "Create script to open/create Excel file",
+        "Add logic to write headers and data",
+        "Implement input prompts or CSV import",
+        "Add auto-save functionality"
+      ],
+      "expected_time_savings": "40 seconds per execution, plus batch processing capability"
+    },
+    {
+      "title": "CSV Import Template",
+      "description": "Use Excel's built-in CSV import feature with a template",
+      "implementation_type": "excel_feature",
+      "difficulty": "easy",
+      "estimated_setup_time": "5 minutes",
+      "steps": [
+        "Create Excel template with headers",
+        "Prepare data in CSV format",
+        "Use Data > From Text/CSV in Excel",
+        "Map columns automatically",
+        "Save as template for reuse"
+      ],
+      "expected_time_savings": "35 seconds per execution"
+    }
+  ],
+  "metadata": {
+    "detected_by": "AGI Assistant v1.0.0",
+    "analysis_engine": "Phi-3-mini",
+    "pattern_detection_version": "1.0",
+    "session_id": "session_2024-01-15_10-20-00",
+    "user_confirmed": false,
+    "exported_at": "2024-01-15T10:35:00Z"
+  },
+  "round_2_integration": {
+    "ready_for_automation": true,
+    "automation_engine_compatible": true,
+    "requires_user_input": true,
+    "recommended_trigger": "keyboard_shortcut",
+    "safety_checks": [
+      "Verify Excel is installed",
+      "Check file permissions",
+      "Confirm data format",
+      "Validate user inputs"
+    ]
+  }
+}

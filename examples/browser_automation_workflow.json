@@ -1,0 +1,60 @@
+{
+  "id": "browser_research_workflow",
+  "name": "Web Research Workflow",
+  "description": "Automated web research workflow using browser automation",
+  "version": "1.0",
+  "created_at": "2025-10-29T00:00:00Z",
+  "actions": [
+    {
+      "step": 1,
+      "type": "browser_navigate",
+      "description": "Navigate to search engine",
+      "url": "https://www.google.com",
+      "wait_until": "load"
+    },
+    {
+      "step": 2,
+      "type": "browser_wait_for",
+      "description": "Wait for search box to appear",
+      "selector": "input[name='q']",
+      "timeout": 5000
+    },
+    {
+      "step": 3,
+      "type": "browser_fill",
+      "description": "Enter search query",
+      "selector": "input[name='q']",
+      "text": "AGI Assistant automation"
+    },
+    {
+      "step": 4,
+      "type": "browser_press_key",
+      "description": "Submit search",
+      "key": "Enter"
+    },
+    {
+      "step": 5,
+      "type": "wait",
+      "description": "Wait for results to load",
+      "duration": 2.0
+    },
+    {
+      "step": 6,
+      "type": "browser_screenshot",
+      "description": "Capture search results",
+      "full_page": true
+    },
+    {
+      "step": 7,
+      "type": "browser_get_text",
+      "description": "Extract first result title",
+      "selector": "h3"
+    }
+  ],
+  "metadata": {
+    "category": "web_research",
+    "tags": ["browser", "search", "research"],
+    "estimated_duration": 15,
+    "requires_browser": true
+  }
+}

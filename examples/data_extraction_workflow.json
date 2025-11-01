@@ -1,0 +1,64 @@
+{
+  "id": "data_extraction_workflow",
+  "name": "Web Data Extraction Workflow",
+  "description": "Extract data from web pages using browser automation",
+  "version": "1.0",
+  "created_at": "2025-10-29T00:00:00Z",
+  "actions": [
+    {
+      "step": 1,
+      "type": "browser_navigate",
+      "description": "Navigate to data page",
+      "url": "https://example.com/data-table",
+      "wait_until": "load"
+    },
+    {
+      "step": 2,
+      "type": "browser_wait_for",
+      "description": "Wait for table to load",
+      "selector": "table.data-table",
+      "timeout": 10000
+    },
+    {
+      "step": 3,
+      "type": "browser_extract_table",
+      "description": "Extract table data",
+      "selector": "table.data-table"
+    },
+    {
+      "step": 4,
+      "type": "browser_screenshot",
+      "description": "Capture table screenshot",
+      "full_page": false
+    },
+    {
+      "step": 5,
+      "type": "browser_click",
+      "description": "Click next page button",
+      "selector": "button.next-page"
+    },
+    {
+      "step": 6,
+      "type": "wait",
+      "description": "Wait for next page to load",
+      "duration": 2.0
+    },
+    {
+      "step": 7,
+      "type": "browser_extract_table",
+      "description": "Extract data from page 2",
+      "selector": "table.data-table"
+    },
+    {
+      "step": 8,
+      "type": "browser_screenshot",
+      "description": "Capture final state"
+    }
+  ],
+  "metadata": {
+    "category": "data_extraction",
+    "tags": ["browser", "scraping", "table", "data"],
+    "estimated_duration": 25,
+    "requires_browser": true
+  }
+}

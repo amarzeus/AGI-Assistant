@@ -1,0 +1,59 @@
+{
+  "id": "file_management_workflow",
+  "name": "File Management Workflow",
+  "description": "Automated file organization and management",
+  "version": "1.0",
+  "created_at": "2025-10-29T00:00:00Z",
+  "actions": [
+    {
+      "step": 1,
+      "type": "folder_create",
+      "description": "Create organized folders",
+      "folder_path": "C:\\Users\\Public\\Documents\\Organized"
+    },
+    {
+      "step": 2,
+      "type": "folder_create",
+      "description": "Create Documents subfolder",
+      "folder_path": "C:\\Users\\Public\\Documents\\Organized\\Documents"
+    },
+    {
+      "step": 3,
+      "type": "folder_create",
+      "description": "Create Images subfolder",
+      "folder_path": "C:\\Users\\Public\\Documents\\Organized\\Images"
+    },
+    {
+      "step": 4,
+      "type": "folder_create",
+      "description": "Create Spreadsheets subfolder",
+      "folder_path": "C:\\Users\\Public\\Documents\\Organized\\Spreadsheets"
+    },
+    {
+      "step": 5,
+      "type": "file_copy",
+      "description": "Copy Excel file to Spreadsheets",
+      "source": "C:\\Users\\Public\\Documents\\contacts.xlsx",
+      "destination": "C:\\Users\\Public\\Documents\\Organized\\Spreadsheets\\contacts.xlsx"
+    },
+    {
+      "step": 6,
+      "type": "file_rename",
+      "description": "Rename copied file",
+      "old_path": "C:\\Users\\Public\\Documents\\Organized\\Spreadsheets\\contacts.xlsx",
+      "new_path": "C:\\Users\\Public\\Documents\\Organized\\Spreadsheets\\contacts_backup.xlsx"
+    },
+    {
+      "step": 7,
+      "type": "wait",
+      "description": "Wait for operations to complete",
+      "duration": 1.0
+    }
+  ],
+  "metadata": {
+    "category": "file_management",
+    "tags": ["files", "organization", "folders"],
+    "estimated_duration": 10,
+    "requires_filesystem": true
+  }
+}

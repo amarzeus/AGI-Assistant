@@ -1,0 +1,198 @@
+# AGI Assistant - .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# Application specific
+# Data directories
+data/
+recordings/
+screenshots/
+videos/
+exports/
+logs/
+temp/
+tmp/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration files with secrets
+config/secrets.json
+.env.local
+.env.production
+
+# AI model files (large files)
+models/
+*.pkl
+*.joblib
+*.h5
+*.pb
+*.onnx
+
+# Audio/Video files
+*.wav
+*.mp3
+*.mp4
+*.avi
+*.mov
+
+# Image files (except icons)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+!icons/
+!assets/icons/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+desktop.ini
+
+# Kiro IDE specific
+.kiro/cache/
+.kiro/temp/
+.kiro/logs/
+
+# Development files
+dev_notes.md
+TODO.md
+NOTES.md
+scratch.py
+debug.py
+
+# Temporary files from this cleanup
+final_cleanup_and_gitignore.py
+
+# Application runtime files
+*.pid
+*.lock
+session_*.json
+user_data/
+app_data/
+captures/
+
+# Additional logs
+*.log
+debug.log
+error.log
+app.log
+
+# Package files
+*.exe
+*.msi
+*.dmg
+*.app
+*.AppImage
+*.deb
+*.rpm
+
+# Additional AI/ML files
+*.bin
+*.safetensors
+*.msgpack
+
+# Additional media files
+*.mkv
+*.webm
+*.flac
+*.ogg
+
+# Documentation build files
+docs/_build/
+site/
+
+# Additional config files
+config.local.json
+settings.local.json

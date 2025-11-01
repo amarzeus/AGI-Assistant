@@ -1,0 +1,111 @@
+MIT License
+
+Copyright (c) 2025 AGI Assistant Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This software includes components from the following open-source projects:
+
+### PyQt6
+- License: GPL v3 / Commercial
+- Copyright: The Qt Company Ltd.
+- Used for: User interface framework
+
+### OpenCV
+- License: Apache 2.0
+- Copyright: OpenCV contributors
+- Used for: Computer vision and image processing
+
+### Whisper (via faster-whisper)
+- License: MIT
+- Copyright: OpenAI
+- Used for: Speech-to-text transcription
+
+### Tesseract OCR
+- License: Apache 2.0
+- Copyright: Google Inc.
+- Used for: Optical character recognition
+
+### PyAutoGUI
+- License: BSD 3-Clause
+- Copyright: Al Sweigart
+- Used for: Desktop automation
+
+### Playwright
+- License: Apache 2.0
+- Copyright: Microsoft Corporation
+- Used for: Browser automation
+
+### Ollama
+- License: MIT
+- Copyright: Ollama contributors
+- Used for: Local LLM integration
+
+### SQLite
+- License: Public Domain
+- Used for: Local database storage
+
+### Python Standard Library
+- License: Python Software Foundation License
+- Copyright: Python Software Foundation
+- Used for: Core functionality
+
+## Privacy Notice
+
+AGI Assistant is designed with privacy as a core principle:
+
+- **Local Processing Only**: All data processing occurs on your local machine
+- **No Cloud Uploads**: Your data never leaves your computer
+- **User Control**: You have complete control over your data
+- **Transparent Operation**: All data storage and processing is documented
+- **Optional Features**: All data collection features can be disabled
+
+## Data Handling
+
+The software may collect and store locally:
+- Screenshots of your desktop (when enabled)
+- Audio recordings (when enabled)
+- Application usage patterns
+- User interaction data
+
+All data is stored locally on your machine and is never transmitted to external servers.
+
+## Disclaimer
+
+This software is provided for legitimate automation and productivity purposes. Users are responsible for:
+- Complying with applicable laws and regulations
+- Respecting privacy and security policies
+- Using the software ethically and responsibly
+- Ensuring proper permissions for automation activities
+
+The developers are not responsible for misuse of this software or any consequences arising from its use.
+
+## Contact
+
+For questions about this license or the software:
+- GitHub Issues: https://github.com/yourusername/agi-assistant/issues
+- Email: support@agi-assistant.com
+
+---
+
+**AGI Assistant** - Making AI work for you, not the other way around.
